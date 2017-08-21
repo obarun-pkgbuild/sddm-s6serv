@@ -2,7 +2,7 @@
 
 pkgname=sddm-s6serv
 pkgver=0.1
-pkgrel=3
+pkgrel=4
 pkgdesc="sddm service for s6"
 arch=(x86_64)
 license=('beerware')
@@ -27,7 +27,7 @@ package() {
 	
 	# log
 	install -Dm 0755 "$srcdir/sddm.log.run.s6" "$pkgdir/etc/s6-serv/available/classic/sddm/log/run"
-	install -Dm 0644 "$srcdir/sddm.logd" "$pkgdir/etc/s6-serv/log.d/serv/sddm"
+	install -Dm 0644 "$srcdir/sddm.logd" "$pkgdir/etc/s6-serv/log.d/sddm"
 	
 	install -Dm 0755 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/sddm-s6serv/LICENSE"
 }
